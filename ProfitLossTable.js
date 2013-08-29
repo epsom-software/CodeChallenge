@@ -84,6 +84,7 @@
         var finalDate = fixtures[fixtures.length - 1].date;
 
         display(currentDate, teams);
+        profitLossSection.style.display="block";
 
         var startButton = profitLossSection.querySelector("a");
 

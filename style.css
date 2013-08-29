@@ -17,6 +17,7 @@ th {
 section.profitLoss {
   max-width: 400px;
   margin: 0 auto;
+  display: none;
 }
 section.profitLoss table {
   width: 100%;
