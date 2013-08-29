@@ -1,0 +1,71 @@
+﻿body {
+    background:#ccc;
+    font-family: Arial, sans-serif;
+}
+a {
+    cursor:pointer;
+}
+table {
+    border-collapse:collapse;
+}
+td, th {
+    border: 1px solid black;
+    text-align:left;
+    padding:3px;
+}
+section.profitLoss table {
+    width:100%;
+}
+section.profitLoss th:first-child {
+    width:60%;
+}
+
+section.profitLoss tr{
+    background:#e8e8e8;
+}
+section.profitLoss th,
+section.profitLoss tr:nth-child(even){
+    background:#f6f6f6;
+}
+section.profitLoss {
+    width:400px;
+    margin:0 auto;
+}
+
+.gradientBackground(@colour) {
+    @darker: darken(@colour, 30%);
+    @darkest: darken(@colour, 42%);
+    background: @colour; /* Old browsers */
+    background: -moz-linear-gradient(left,  @colour 0%, @darker 44%, @darkest 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,@colour), color-stop(44%,@darker), color-stop(100%,@darkest)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  @colour 0%,@darker 44%,@darkest 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  @colour 0%,@darker 44%,@darkest 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  @colour 0%,@darker 44%,@darkest 100%); /* IE10+ */
+    background: linear-gradient(to right,  @colour 0%,@darker 44%,@darkest 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@colour', endColorstr='@darkest',GradientType=1 ); /* IE6-9 */
+}
+section.profitLoss td.profit {
+    .gradientBackground(#c9de96);
+}
+section.profitLoss td.loss {
+    .gradientBackground(#ef7373);
+}
+section.profitLoss tr:nth-child(even) td.profit {
+    .gradientBackground(lighten(#c9de96,5%));
+}
+section.profitLoss tr:nth-child(even) td.loss {
+    .gradientBackground(lighten(#ef7373,5%));
+}
+
+section.profitLoss a {
+    float:left;
+    background:white;
+    border:1px solid black;
+    box-shadow: 4px 4px 2px #888;
+    padding:3px;
+}
+section.profitLoss h1 {
+    text-align:right;
+    text-shadow: 1px 1px 1px #888;
+}
+

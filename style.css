@@ -1,0 +1,148 @@
+body {
+  background: #ccc;
+  font-family: Arial, sans-serif;
+}
+a {
+  cursor: pointer;
+}
+table {
+  border-collapse: collapse;
+}
+td,
+th {
+  border: 1px solid black;
+  text-align: left;
+  padding: 3px;
+}
+section.profitLoss table {
+  width: 100%;
+}
+section.profitLoss th:first-child {
+  width: 60%;
+}
+section.profitLoss tr {
+  background: #e8e8e8;
+}
+section.profitLoss th,
+section.profitLoss tr:nth-child(even) {
+  background: #f6f6f6;
+}
+section.profitLoss {
+  width: 400px;
+  margin: 0 auto;
+}
+section.profitLoss td.profit {
+  background: #c9de96;
+  /* Old browsers */
+
+  background: -moz-linear-gradient(left, #c9de96 0%, #85a734 44%, #607826 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #c9de96), color-stop(44%, #85a734), color-stop(100%, #607826));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(left, #c9de96 0%, #85a734 44%, #607826 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(left, #c9de96 0%, #85a734 44%, #607826 100%);
+  /* Opera 11.10+ */
+
+  background: -ms-linear-gradient(left, #c9de96 0%, #85a734 44%, #607826 100%);
+  /* IE10+ */
+
+  background: linear-gradient(to right, #c9de96 0%, #85a734 44%, #607826 100%);
+  /* W3C */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@colour', endColorstr='@darkest', GradientType=1);
+  /* IE6-9 */
+
+}
+section.profitLoss td.loss {
+  background: #ef7373;
+  /* Old browsers */
+
+  background: -moz-linear-gradient(left, #ef7373 0%, #b41515 44%, #7d0e0e 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #ef7373), color-stop(44%, #b41515), color-stop(100%, #7d0e0e));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(left, #ef7373 0%, #b41515 44%, #7d0e0e 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(left, #ef7373 0%, #b41515 44%, #7d0e0e 100%);
+  /* Opera 11.10+ */
+
+  background: -ms-linear-gradient(left, #ef7373 0%, #b41515 44%, #7d0e0e 100%);
+  /* IE10+ */
+
+  background: linear-gradient(to right, #ef7373 0%, #b41515 44%, #7d0e0e 100%);
+  /* W3C */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@colour', endColorstr='@darkest', GradientType=1);
+  /* IE6-9 */
+
+}
+section.profitLoss tr:nth-child(even) td.profit {
+  background: #d3e4a9;
+  /* Old browsers */
+
+  background: -moz-linear-gradient(left, #d3e4a9 0%, #95ba3a 44%, #708b2c 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #d3e4a9), color-stop(44%, #95ba3a), color-stop(100%, #708b2c));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(left, #d3e4a9 0%, #95ba3a 44%, #708b2c 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(left, #d3e4a9 0%, #95ba3a 44%, #708b2c 100%);
+  /* Opera 11.10+ */
+
+  background: -ms-linear-gradient(left, #d3e4a9 0%, #95ba3a 44%, #708b2c 100%);
+  /* IE10+ */
+
+  background: linear-gradient(to right, #d3e4a9 0%, #95ba3a 44%, #708b2c 100%);
+  /* W3C */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@colour', endColorstr='@darkest', GradientType=1);
+  /* IE6-9 */
+
+}
+section.profitLoss tr:nth-child(even) td.loss {
+  background: #f28a8a;
+  /* Old browsers */
+
+  background: -moz-linear-gradient(left, #f28a8a 0%, #cb1717 44%, #941111 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #f28a8a), color-stop(44%, #cb1717), color-stop(100%, #941111));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(left, #f28a8a 0%, #cb1717 44%, #941111 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(left, #f28a8a 0%, #cb1717 44%, #941111 100%);
+  /* Opera 11.10+ */
+
+  background: -ms-linear-gradient(left, #f28a8a 0%, #cb1717 44%, #941111 100%);
+  /* IE10+ */
+
+  background: linear-gradient(to right, #f28a8a 0%, #cb1717 44%, #941111 100%);
+  /* W3C */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@colour', endColorstr='@darkest', GradientType=1);
+  /* IE6-9 */
+
+}
+section.profitLoss a {
+  float: left;
+  background: white;
+  border: 1px solid black;
+  box-shadow: 4px 4px 2px #888;
+  padding: 3px;
+}
+section.profitLoss h1 {
+  text-align: right;
+  text-shadow: 1px 1px 1px #888;
+}
