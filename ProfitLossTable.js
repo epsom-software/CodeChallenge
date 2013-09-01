@@ -100,26 +100,23 @@
 
                 fixtures.forEach(function (fixture) {
                     if (fixture.date - currentDate == 0) {
-                        var winner, losers, winningPrice;
+                        var winner, winningPrice;
 
                         if (fixture.homeGoals > fixture.awayGoals) {
                             winner = fixture.homeTeam;
-                            losers = [ fixture.awayTeam ];
                             winningPrice = fixture.homePrice;
 
                         } else if (fixture.homeGoals < fixture.awayGoals) {
                             winner = fixture.awayTeam;
-                            losers = [ fixture.homeTeam ];
                             winningPrice = fixture.awayPrice;
-                        } else {
-                            losers = [ fixture.homeTeam, fixture.awayTeam ];
                         }
 
                         teams.forEach(function (t) {
-                            if (t.name == winner) {
-                                t.addProfit((winningPrice - 1) * stake);
-                            } else if (t.name == losers[0] || t.name == losers[1]) {
+                            if (t.name == fixture.homeTeam || t.name == fixture.awayTeam) {
                                 t.addProfit(-stake);
+                            }
+                            if (t.name == winner) {
+                                t.addProfit(winningPrice * stake);
                             }
                         });
                     }
