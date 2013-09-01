@@ -100,25 +100,25 @@
 
                 fixtures.forEach(function (fixture) {
                     if (fixture.date - currentDate == 0) {
-                        var winner, loser, winningPrice;
+                        var winner, losers, winningPrice;
 
                         if (fixture.homeGoals > fixture.awayGoals) {
                             winner = fixture.homeTeam;
-                            loser = fixture.awayTeam;
+                            losers = [ fixture.awayTeam ];
                             winningPrice = fixture.homePrice;
 
                         } else if (fixture.homeGoals < fixture.awayGoals) {
                             winner = fixture.awayTeam;
-                            loser = fixture.homeTeam;
+                            losers = [ fixture.homeTeam ];
                             winningPrice = fixture.awayPrice;
+                        } else {
+                            losers = [ fixture.homeTeam, fixture.awayTeam ];
                         }
 
                         teams.forEach(function (t) {
                             if (t.name == winner) {
-                            
-                                //Note, I would like to check that (winningPrice - 1) is correct behaviour.
                                 t.addProfit((winningPrice - 1) * stake);
-                            } else if (t.name == loser) {
+                            } else if (t.name == losers[0] || t.name == losers[1]) {
                                 t.addProfit(-stake);
                             }
                         });
